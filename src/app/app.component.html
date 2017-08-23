@@ -1,0 +1,43 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center" class="jumbotron">
+<h2> Calculadora </h2> <h5> by Wesley Miranda </h5>
+  <hr>
+<div>
+  <table align="center" class="table-inverse">
+    <tr> <td colspan="4" style="width:100px; height: 90px;">{{tela}}</td>
+    </tr>
+    <tr>
+      <td style="width:100px"> <button type="button" class="btn btn-primary" (click)="clear()"> C </button> </td>
+      <td style="width:100px"> <button type="button" class="btn btn-primary" (click)="calc(null,'*')"> * </button> </td>  
+      <td style="width:100px"> <button type="button" class="btn btn-primary" (click)="calc(null,'/')"> / </button> </td>
+      <td style="width:100px"> <button type="button" class="btn btn-primary" (click)="calc(null,'+')"> + </button> </td>
+    </tr>
+    <tr>
+      <td style="width:100px"> <button type="button" class="btn btn-primary" (click)="calc(1)"> 1 </button> </td>
+      <td style="width:100px"> <button type="button" class="btn btn-primary" (click)="calc(2)"> 2 </button> </td>
+      <td style="width:100px"> <button type="button" class="btn btn-primary" (click)="calc(3)"> 3 </button> </td>
+      <td style="width:100px"> <button type="button" class="btn btn-primary" (click)="calc(null,'-')"> - </button> </td>
+    </tr>
+    <tr>
+      <td style="width:100px"> <button type="button" class="btn btn-primary" (click)="calc(4)"> 4 </button> </td>
+      <td style="width:100px"> <button type="button" class="btn btn-primary" (click)="calc(5)"> 5 </button> </td>
+      <td style="width:100px"> <button type="button" class="btn btn-primary" (click)="calc(6)"> 6 </button> </td>
+      <td style="width:100px" td rowspan="3"> <button type="button" style="height:152px" class="btn btn-primary" (click)="finish()"> = </button> </td>
+    </tr>
+    <tr>
+      <td style="width:100px"> <button type="button" class="btn btn-primary" (click)="calc(7)"> 7 </button> </td>
+      <td style="width:100px"> <button type="button" class="btn btn-primary" (click)="calc(8)"> 8 </button> </td>
+      <td style="width:100px"> <button type="button" class="btn btn-primary" (click)="calc(9)"> 9 </button> </td>
+    </tr>
+    <tr>
+      <td style="width:100px"> <button type="button" class="btn btn-primary" (click)="p()">  x² </button> </td>
+      <td style="width:100px"> <button type="button" class="btn btn-primary" (click)="calc(0)"> 0 </button> </td>
+      <td style="width:100px"> <button type="button" class="btn btn-primary" (click)="sqrt()"> √ </button> </td>
+    </tr>
+  </table>
+  {{teste}}
+  </div>
+  <div class="jumbotron">
+      <img width="150" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOS4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCAyNTAgMjUwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNTAgMjUwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPg0KCS5zdDB7ZmlsbDojREQwMDMxO30NCgkuc3Qxe2ZpbGw6I0MzMDAyRjt9DQoJLnN0MntmaWxsOiNGRkZGRkY7fQ0KPC9zdHlsZT4NCjxnPg0KCTxwb2x5Z29uIGNsYXNzPSJzdDAiIHBvaW50cz0iMTI1LDMwIDEyNSwzMCAxMjUsMzAgMzEuOSw2My4yIDQ2LjEsMTg2LjMgMTI1LDIzMCAxMjUsMjMwIDEyNSwyMzAgMjAzLjksMTg2LjMgMjE4LjEsNjMuMiAJIi8+DQoJPHBvbHlnb24gY2xhc3M9InN0MSIgcG9pbnRzPSIxMjUsMzAgMTI1LDUyLjIgMTI1LDUyLjEgMTI1LDE1My40IDEyNSwxNTMuNCAxMjUsMjMwIDEyNSwyMzAgMjAzLjksMTg2LjMgMjE4LjEsNjMuMiAxMjUsMzAgCSIvPg0KCTxwYXRoIGNsYXNzPSJzdDIiIGQ9Ik0xMjUsNTIuMUw2Ni44LDE4Mi42aDBoMjEuN2gwbDExLjctMjkuMmg0OS40bDExLjcsMjkuMmgwaDIxLjdoMEwxMjUsNTIuMUwxMjUsNTIuMUwxMjUsNTIuMUwxMjUsNTIuMQ0KCQlMMTI1LDUyLjF6IE0xNDIsMTM1LjRIMTA4bDE3LTQwLjlMMTQyLDEzNS40eiIvPg0KPC9nPg0KPC9zdmc+DQo=">
+    </div>
+</div>
